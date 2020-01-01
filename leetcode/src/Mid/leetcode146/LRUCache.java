@@ -2,7 +2,9 @@ package leetcode146;
 
 import java.util.HashMap;
 
-/**
+/**LRU缓存机制
+ *
+ *
  * 本题使用双向链表加HashMap实现的答案
  *
  * 也可以使用 Java 内置的linkHashMap很简单就能实现想要的结果，记得需要@override removeEldestEntry 方法
