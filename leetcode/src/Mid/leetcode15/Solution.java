@@ -31,6 +31,7 @@ class Solution {
                     ls.add(Arrays.asList(nums[target], nums[left], nums[right]));
                     left++;
                     right--;
+                    //排除重复的left和right
                     while (nums[left] == nums[left-1] && left < right) {
                         left++;
                     }
