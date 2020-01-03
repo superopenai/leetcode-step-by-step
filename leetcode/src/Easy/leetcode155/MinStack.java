@@ -4,8 +4,11 @@ import java.net.InterfaceAddress;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+使用双端队列代替优化栈的性能
+*/
 class MinStack {
+    //使用两个双端队列，1个用于遍历，一个用于储存最小值
     ArrayDeque<Integer> mindeque ;
     ArrayDeque<Integer> integerArrayDeque;
 
