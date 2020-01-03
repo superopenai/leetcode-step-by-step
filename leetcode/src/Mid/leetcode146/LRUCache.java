@@ -96,7 +96,7 @@ class LRUCache {
     }
 
 
-    class Node {
+    static class Node {
         int key;
         int value;
         Node prev;
