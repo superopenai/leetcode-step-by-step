@@ -19,7 +19,7 @@ class  Solution
 
 }
 
-//class Solution {
+//class leetcode84.Solution {
 //    public int removeDuplicates(int[] nums) {
 //        // 需要计算出哪个元素需要向前移动，并判断需要向前移动多少
 //        int step = 0;

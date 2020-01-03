@@ -1,4 +1,5 @@
 package leetcode20;
+
 import java.util.Stack;
 
 class Solution {

@@ -34,7 +34,7 @@ class Solution {
 /**
  * 效率较低的哈希表做法
  */
-//class Solution {
+//class leetcode84.Solution {
 //    public boolean hasCycle(ListNode head)
 //    {
 //        HashSet<ListNode> hashSet = new HashSet<>();
