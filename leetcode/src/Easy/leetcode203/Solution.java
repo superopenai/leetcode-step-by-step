@@ -1,5 +1,9 @@
 package leetcode203;
 
+/**
+ *
+ * 移除链表元素
+ */
 class Solution {
 
     public ListNode removeElements(ListNode head, int val) {

@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+
+/**
+ *
+ * 字母异位词分组
+ */
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String, ArrayList<String>> strMap = new HashMap<>();

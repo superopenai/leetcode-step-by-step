@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
+/**
+ * 有效的字母异位词
+ */
 class Solution {
     public boolean isAnagram(String s, String t) {
 

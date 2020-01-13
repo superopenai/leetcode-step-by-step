@@ -1,7 +1,8 @@
 package leetcode84;
 import java.util.ArrayDeque;
 /**
-底层使用双端队列代替官方答案的栈，
+ * 柱状图中最大的矩形
+ * 底层使用双端队列代替官方答案的栈，
 */
 
 public class Solution {

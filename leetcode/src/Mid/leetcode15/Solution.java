@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 三数之和
+ */
 //参考大神题解，利用双指针夹逼。难点在如何排除重复项
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {

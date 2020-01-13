@@ -1,5 +1,9 @@
 package leetcode26;
 
+/**
+ *
+ * 删除排序数组中的重复项
+ */
 class  Solution
     //官方题解
 {

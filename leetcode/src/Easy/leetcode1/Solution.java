@@ -2,6 +2,10 @@ package leetcode1;
 
 import java.util.HashMap;
 
+/**
+ *
+ * 两数之和
+ */
 class Solution {
     public int[] twoSum(int[] nums, int target) {
 

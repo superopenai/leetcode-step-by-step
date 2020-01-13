@@ -2,6 +2,10 @@ package leetcode20;
 
 import java.util.Stack;
 
+/**
+ *
+ * 有效的括号
+ */
 class Solution {
     public boolean isValid(String s) {
 

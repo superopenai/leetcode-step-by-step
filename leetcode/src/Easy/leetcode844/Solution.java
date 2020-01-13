@@ -3,6 +3,9 @@ package leetcode844;
 import java.util.ArrayList;
 import java.util.Stack;
 
+/**
+ * 比较含退格的字符串
+ */
 class Solution {
     public boolean backspaceCompare(String S, String T) {
         Stack<Character> leftStack = new Stack<>();

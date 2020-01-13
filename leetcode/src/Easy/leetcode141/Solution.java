@@ -1,5 +1,8 @@
 package leetcode141;
 
+/**
+ * 环形链表
+ */
 class Solution {
     /**
      * 效率较高的快指针
