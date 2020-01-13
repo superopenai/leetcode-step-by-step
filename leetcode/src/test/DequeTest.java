@@ -1,18 +1,22 @@
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Deque;
+import java.util.*;
 
 public class DequeTest {
     public static void main(String[] args) {
-        Deque<Integer> integerArrayDeque = new ArrayDeque<>(2);
-        integerArrayDeque.addLast(2);
-        System.out.println(integerArrayDeque.size());
-        integerArrayDeque.addLast(3);
-        System.out.println(integerArrayDeque.size());
-        integerArrayDeque.addLast(4);
-        System.out.println(integerArrayDeque.size());
-        System.out.println(integerArrayDeque);
+
+        String s="anagram";
+        String t = "anagram";
+
+
+        char[] schars = s.toCharArray();
+        char[] tchars = t.toCharArray();
+        Arrays.sort(schars);
+        Arrays.sort(tchars);
+
+        System.out.println(schars);
+        System.out.println(tchars);
+        System.out.println(schars==tchars);
+        System.out.println(schars.equals(tchars));
+
     }
 
 
