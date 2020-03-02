@@ -7,7 +7,7 @@
 >另一种做法是官方给出的快慢指针做法。由于本人较菜b。没有理解好官方题解emmmmm。
 
 ```java
-class  leetcode84.Solution
+class  leetcode84.leetcode322.Solution
     //官方题解
 {
     public int removeDuplicates(int[] nums) {
@@ -29,7 +29,7 @@ class  leetcode84.Solution
 ![](https://i.loli.net/2019/08/18/RWnYBMphSCaKUry.png)
 
 ```java
-class leetcode84.Solution {
+class leetcode84.leetcode322.Solution {
     public int removeDuplicates(int[] nums) {
         int step = 0;
         //表示重复元素个数。
