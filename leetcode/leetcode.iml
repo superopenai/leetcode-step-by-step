@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/Mid" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/hard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CTCI" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="11" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
