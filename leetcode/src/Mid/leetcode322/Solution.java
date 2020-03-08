@@ -1,39 +1,31 @@
 package leetcode322;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
 
 /**
  * @Classname leetcode322.Solution
- * @Description 322 零钱兑换
+ * @Description 322 零钱兑换 (动态规划)
  * @Date 2020/2/7 9:32
  * @Created by superning
  */
+
 class Solution {
-    int minCount=Integer.MAX_VALUE;
     public int coinChange(int[] coins, int amount) {
-        Arrays.sort(coins);
-        useNext(0,amount,coins,coins.length-1);//递归调用，从尾向首递归调用，尽量使用大额硬币
-        if (minCount==Integer.MAX_VALUE) {
-            return -1;
-        } else {
-            return minCount;
-        }
-    }
-    //i是已经用了多少个硬币，amount是剩下金额，coins是硬币集合，n是第几种硬币
-    private void useNext(int i, int amount, int[] coins, int n) {
-        if (amount==0){ //找到一种组合
-            if (i<minCount) {
-                minCount=i;
+        int[] res = new int[amount];
+        //设置amount+1是作为一个不可达值
+        Arrays.fill(res,amount+1);
+        res[0]=0;
+        for (int i = 0; i < res.length; i++) {
+            for (int coin : coins) {
+                if (i-coin<0){
+                    continue;
+                }
+                //计算的是最少硬币数，res【】里默认都是amount+1的不可达值，所以会res【i-coin】+1（1的意思是一枚硬币）
+                //然后res【i-coin】继续往下计算
+                res[i] = Math.min(res[i],1+res[i-coin]);
             }
-            return;//结束
         }
-        if(n==-1||amount/coins[n]+i>=minCount) {
-            return;//尝试失败，压根就不用进行后面的循环
-        }
-        //尽可能多的使用大硬币，
-        for (int j = amount/coins[n]; j >=0 ; j--) {
-            useNext(i+j,amount-coins[n]*j,coins,n-1);
-        }
+        return (res[amount]==amount+1)?-1:res[amount];
     }
 }
-
