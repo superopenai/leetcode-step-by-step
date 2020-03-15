@@ -19,9 +19,11 @@ class Solution {
         return count;
     }
     private void dfs(char[][] grid, int i, int j){
+        // 终结条件
         if(i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] == '0') {
             return;
         }
+        //沉岛
         grid[i][j] = '0';
         //上下左右不断的找下去
         dfs(grid, i + 1, j);
