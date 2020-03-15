@@ -2,7 +2,9 @@ package offer09;
 
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.TreeMap;
 
 /**
  * @Classname CQueue
@@ -18,6 +20,7 @@ class CQueue {
         left = new ArrayDeque<>();
         //只出不进
         right = new ArrayDeque<>();
+
     }
 
     public void appendTail(int value) {
