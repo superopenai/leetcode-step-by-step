@@ -25,7 +25,7 @@ public class MaxQueue {
         if (deque.isEmpty()&&maxdeque.isEmpty()){
             return -1;
         }
-
+        //最大的一定在后顶端
         return maxdeque.peekLast();
 
     }
@@ -37,6 +37,7 @@ public class MaxQueue {
         }else {
             deque.addLast(value);
             //关键所在
+            // 新进来的新值要把maxdeque里所有比他小的踢出去，并且放在比它大的前端。
             while (!maxdeque.isEmpty()&&value>maxdeque.peekFirst()){
                 maxdeque.pollFirst();
             }
