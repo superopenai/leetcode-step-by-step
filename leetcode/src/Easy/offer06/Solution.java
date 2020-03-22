@@ -1,8 +1,7 @@
 package offer06;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
+import java.lang.reflect.Constructor;
+import java.util.*;
 
 /**
  * @Classname Solution
@@ -46,8 +45,8 @@ class Solution {
 //            res[count++] = deque.pollLast();
 //        }
 //        return res;
-    }
-}
+//    }
+//}
 
 
 class ListNode {

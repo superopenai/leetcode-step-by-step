@@ -10,28 +10,28 @@ import java.util.Stack;
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
 
-        TreeNode p = root,r = null;
+        TreeNode node = root,r = null;
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> s = new Stack<>();
-        while(!s.isEmpty() || p != null)
+        while(!s.isEmpty() || node != null)
         {
-            if(p != null)
+            if(node != null)
             {
-                s.push(p);
-                p = p.left;
+                s.push(node);
+                node = node.left;
             }
             else
             {
-                p = s.peek();
-                if(p.right == null || p.right == r)
+                node = s.peek();
+                if(node.right == null || node.right == r)
                 {
-                    res.add(p.val);
+                    res.add(node.val);
                     r = s.pop();
 
-                    p = null;
+                    node = null;
                 }
                 else {
-                    p = p.right;
+                    node = node.right;
                 }
 
             }
