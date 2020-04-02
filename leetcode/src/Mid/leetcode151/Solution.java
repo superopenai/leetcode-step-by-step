@@ -1,5 +1,8 @@
 package leetcode151;
 
+import java.util.LinkedList;
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * @author superning
  * @Classname Solution
@@ -27,6 +30,7 @@ class Solution {
         }
         sb.append(split[length-1]);
     return sb.toString();
+
     }
 
     public static void main(String[] args) {

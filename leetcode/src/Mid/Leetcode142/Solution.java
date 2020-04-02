@@ -11,6 +11,7 @@ package Leetcode142;
 class ListNode {
     int val;
     ListNode next;
+
     ListNode(int x) {
         val = x;
         next = null;
@@ -19,22 +20,26 @@ class ListNode {
 
 public class Solution {
     public ListNode detectCycle(ListNode head) {
-        if(head==null||head.next==null||head.next.next==null){
-            return null; }
-
-        ListNode slow = head ;
-        ListNode fast = head ;
-        while(fast!=null&&fast.next!=null){
-            fast = fast.next.next;
-            slow = slow.next;
-            if(slow==fast){
-                break;}
+        if (head == null || head.next == null || head.next.next == null) {
+            return null;
         }
 
-        if(fast!=slow) return null;
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (slow == fast) {
+                break;
+            }
+        }
+
+        if (fast != slow) {
+            return null;
+        }
 
         fast = head;
-        while(fast!=slow){
+        while (fast != slow) {
             fast = fast.next;
             slow = slow.next;
         }

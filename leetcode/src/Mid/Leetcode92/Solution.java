@@ -10,26 +10,24 @@ import java.util.List;
  */
 class Solution {
     public ListNode reverseBetween(ListNode head, int m, int n) {
-
-        ListNode res = new ListNode(0);
-        res.next = head;
-        ListNode node = res;
-        for (int i =1; i < m; i++) {
+        ListNode dummy =new ListNode(0);
+        dummy.next =head;
+        ListNode node =dummy;
+        for(int i=1;i<m;i++){
             node =node.next;
         }
-        ListNode nextHead = node.next;
+        ListNode mhead =node.next;
+        ListNode pre = null;
         ListNode next =null;
-        ListNode pre  =null;
-        for (int i = m; i <= n; i++) {
-            next = nextHead.next;
-            nextHead.next = pre;
-            pre = nextHead;
-            nextHead = next;
-
+        for(int j=m;j<=n;j++){
+            next =mhead.next;
+            mhead.next =pre;
+            pre =mhead;
+            mhead =next;
         }
-        node.next.next = next;
+        node.next.next  =next;
         node.next =pre;
-        return res.next;
+        return dummy.next;
     }
 }
 
