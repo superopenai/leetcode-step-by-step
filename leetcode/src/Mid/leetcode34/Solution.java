@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Classname Solution
- * @Description TODO
+ * @Description 在排序数组中查找元素的第一个和最后一个位置
  * @Date 2020/4/26 16:47
  * @Created by superning
  */
