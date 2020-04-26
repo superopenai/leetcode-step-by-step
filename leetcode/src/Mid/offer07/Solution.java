@@ -17,16 +17,20 @@ class Solution {
         for(int i = 0; i < inorder.length; i++) {
             dic.put(inorder[i], i);
         }
-        return recur(0, 0, inorder.length - 1);
+
+        return rebuild(0, 0, inorder.length - 1);
     }
-    TreeNode recur(int pre_root, int in_left, int in_right) {
-        if(in_left > in_right) {
+
+    TreeNode rebuild(int preRoot, int inLeft, int inRight) {
+        if(inLeft > inRight) {
             return null;
         }
-        TreeNode root = new TreeNode(po[pre_root]);
-        int i = dic.get(po[pre_root]);
-        root.left = recur(pre_root + 1, in_left, i - 1);
-        root.right = recur(pre_root + i - in_left + 1, i + 1, in_right);
+
+        TreeNode root = new TreeNode(po[preRoot]);
+        int i = dic.get(po[preRoot]);
+
+        root.left = rebuild(preRoot + 1, inLeft, i - 1);
+        root.right = rebuild(preRoot + i - inLeft + 1, i + 1, inRight);
         return root;
     }
 }

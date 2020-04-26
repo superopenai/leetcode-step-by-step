@@ -50,7 +50,7 @@ class Solution {
         for (int i = 0; i < size; i++) {
             TreeNode treeNode;
             if ((count&1)==1){
-                 treeNode = deque.removeFirst();
+                treeNode = deque.removeFirst();
             }else {
                 treeNode =evendeque.removeFirst();
             }
@@ -72,11 +72,11 @@ class Solution {
 
     private void process(TreeNode node) {
         if ((count&1)==1){
-            if (node.right != null) {
-                evendeque.offerLast(node.right);
-            }
             if (node.left != null) {
-                evendeque.offerLast(node.left);
+                evendeque.offerFirst(node.left);
+            }
+            if (node.right != null) {
+                evendeque.offerFirst(node.right);
             }
         }else {
             if (node.right != null) {
@@ -89,19 +89,6 @@ class Solution {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

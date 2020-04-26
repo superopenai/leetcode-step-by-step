@@ -2,6 +2,7 @@ package leetcode94;
 
 
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -12,16 +13,20 @@ import java.util.Stack;
 class Solution {
     public List < Integer > inorderTraversal(TreeNode root) {
         List < Integer > res = new ArrayList < > ();
-        Stack<TreeNode> stack = new Stack<>();
+        ArrayDeque<TreeNode> stack = new ArrayDeque<TreeNode>();
+        if (root==null) {
+            return res;
+        }
+
         while(root!=null||!stack.isEmpty())
         {
             while (root!=null) {
-                stack.push(root);
+                stack.addLast(root);
                 root = root.left;
             }
-                TreeNode node = stack.pop();
-                res.add(node.val);
-                root = node.right;
+            TreeNode node = stack.pollLast();
+            res.add(node.val);
+            root = node.right;
 
         }
         return res;
